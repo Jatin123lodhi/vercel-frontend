@@ -10,7 +10,7 @@ interface LogMessage {
 
 export function DeployingLogs({ projectSlug, isDeploying, setIsDeployed, setIsDeploying, resetInputForm }: { projectSlug: string, isDeploying: boolean, setIsDeployed: (isDeployed: boolean) => void, setIsDeploying: (isDeploying: boolean) => void, resetInputForm: () => void }) {
   const [messages, setMessages] = useState<LogMessage[]>([]);
-  const [socket, setSocket] = useState<any>(null);
+  const [, setSocket] = useState<any>(null);
   const [isComplete, setIsComplete] = useState(false);
   const [timer, setTimer] = useState(0);
   const logsEndRef = useRef<HTMLDivElement>(null);
